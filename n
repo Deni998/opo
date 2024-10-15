@@ -1,1 +1,4 @@
 apt -y install nodejs curl && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash && source ~/.bashrc && nvm install v20.18.0
+root @ Ubuntu @ Podman
+
+podman run --rm -it -e DISPLAY=:1 -v /tmp/.X11-unix:/tmp/.X11-unix -v /headless:/root -u 0 docker.io/ubuntu:20.04 bash -c 'apt-get update; bash'
